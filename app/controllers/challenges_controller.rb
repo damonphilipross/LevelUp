@@ -9,7 +9,7 @@ class ChallengesController < ApplicationController
   end
 
   def create
-    @challenge = Create.new(challenge_params)
+    @challenge = Challenge.new(challenge_params)
     @challenge.save
     redirect_to challenge_path(@challenge)
   end
