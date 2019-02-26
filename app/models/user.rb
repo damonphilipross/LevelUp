@@ -3,8 +3,9 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
-
-    has_many :challenges
-    has_many :participants
-    has_many :challenge_participations, through: :participants, source: :challenges
+  # for user
+  has_many :challenges
+  has_many :participants
+  # for influencer
+  has_many :challenge_participations, through: :participants, source: :challenges
 end
