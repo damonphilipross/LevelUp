@@ -18,7 +18,7 @@ gem 'uglifier'
 gem 'webpacker'
 gem "pundit"
 gem "cloudinary"
-gem 'faker'
+gem 'faker', :git => 'https://github.com/stympy/faker.git', :branch => 'master'
 group :development do
   gem 'web-console', '>= 3.3.0'
 end
