@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   def profile
-    @user = current_user
+
     if current_user.influencer
       # challenges created by influencer
       @challenges = current_user.challenges
