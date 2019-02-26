@@ -4,4 +4,9 @@ class UserPolicy < ApplicationPolicy
       scope.all
     end
   end
+
+  def profile?
+    record.user == user
+    # Only restaurant creator can update it
+  end
 end
