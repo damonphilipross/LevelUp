@@ -1,4 +1,4 @@
 class Participant < ApplicationRecord
-  belongs_to :follower
+  belongs_to :user
   belongs_to :challenge
 end

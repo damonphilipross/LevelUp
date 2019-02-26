@@ -2,7 +2,7 @@ class CreateChallenges < ActiveRecord::Migration[5.2]
   def change
     create_table :challenges do |t|
       t.text :detail
-      t.references :follower, foreign_key: true
+      t.references :user, foreign_key: true
       t.date :start_date
       t.integer :duration
       t.float :cost

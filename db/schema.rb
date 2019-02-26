@@ -10,14 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_02_26_001715) do
+ActiveRecord::Schema.define(version: 2019_02_26_000426) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "challenges", force: :cascade do |t|
     t.text "detail"
-    t.bigint "follower_id"
+    t.bigint "user_id"
     t.date "start_date"
     t.integer "duration"
     t.float "cost"
@@ -30,23 +30,16 @@ ActiveRecord::Schema.define(version: 2019_02_26_001715) do
     t.string "location"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["follower_id"], name: "index_challenges_on_follower_id"
-  end
-
-  create_table "followers", force: :cascade do |t|
-    t.string "email"
-    t.boolean "influencer", default: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_challenges_on_user_id"
   end
 
   create_table "participants", force: :cascade do |t|
-    t.bigint "follower_id"
+    t.bigint "user_id"
     t.bigint "challenge_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["challenge_id"], name: "index_participants_on_challenge_id"
-    t.index ["follower_id"], name: "index_participants_on_follower_id"
+    t.index ["user_id"], name: "index_participants_on_user_id"
   end
 
   create_table "photos", force: :cascade do |t|
@@ -65,12 +58,14 @@ ActiveRecord::Schema.define(version: 2019_02_26_001715) do
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "influencer", default: false
+    t.boolean "boolean", default: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "challenges", "followers"
+  add_foreign_key "challenges", "users"
   add_foreign_key "participants", "challenges"
-  add_foreign_key "participants", "followers"
+  add_foreign_key "participants", "users"
   add_foreign_key "photos", "challenges"
 end
