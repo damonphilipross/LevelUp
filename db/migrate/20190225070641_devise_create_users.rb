@@ -34,7 +34,7 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.2]
 
 
       t.timestamps null: false
-      t.boolean  :influencer, :boolean, default: false
+      t.boolean  :influencer, default: false
     end
 
     add_index :users, :email,                unique: true
