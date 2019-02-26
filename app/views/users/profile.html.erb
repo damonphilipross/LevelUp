@@ -1,2 +1,21 @@
 <h1>Users#profile</h1>
-<p>Find me in app/views/users/profile.html.erb</p>
+
+
+
+<div class="container">
+  <div class="row">
+    <% @challenges.each do |challenge| %>
+    <div class="col-xs-12 col-sm-4">
+      <!-- insert <div class="card"> -->
+      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://kitt.lewagon.com/placeholder/cities/shanghai');">
+        <div class="card-category">Popular</div>
+        <div class="card-description">
+          <h3><%= link_to challenge.title, challenge_path(challenge) %> </h3>
+          <p> <%= challenge.detail %></p>
+        </div>
+        <img class="card-user" src="https://kitt.lewagon.com/placeholder/users/tgenaitay">
+      </div>
+    </div>
+    <% end %>
+  </div>
+</div>
