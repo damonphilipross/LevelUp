@@ -12,23 +12,25 @@
   width: 200px;
 }
 input.check_boxes {
-  margin-left: 3px;
-  vertical-align: -3px;
-  background-size: 30px;
+
+}
+.check_boxes{
+  color: #f4793b;
 }
 #challenge_form{
   background-color: rgb(230,230,230);
   padding: 50px;
-  box-shadow: 5px 5px 150px;
-  border-radius: 10px;
+  box-shadow: 5px 5px 800px;
+  border-radius: 0px 0px 10px 10px;
   margin-bottom: 100px;
 }
 #challenge_header{
-  background-color: #f4793b;
+  background-color: #808181;
   color: white;
   padding: 50px;
-  box-shadow: 5px 5px 10px;
-  border-radius: 10px;
+  box-shadow: 5px 5px 800px;
+  border-radius: 10px 10px 0px 0px;
   font-size: 50px;
   font-weight: bold;
+  margin-bottom: -10px;
 }
