@@ -1,6 +1,6 @@
-<h1>Users#profile test</h1>
+<h1>Profile: <%= current_user.email %></h1>
 <div class="container">
-  <h2> challenges </h2>
+  <h2> Your Challenges </h2>
   <div class="row">
     <% @challenges.each do |challenge| %>
       <!-- insert <div class="card"> -->
