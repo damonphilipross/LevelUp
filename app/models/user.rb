@@ -7,5 +7,6 @@ class User < ApplicationRecord
   has_many :challenges
   has_many :participants
   # for influencer
-  has_many :challenge_participations, through: :participants, source: :challenges
+  has_many :challenge_participations, through: :participants, source: :challenge
 end
+
