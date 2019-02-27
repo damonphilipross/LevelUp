@@ -1,0 +1,25 @@
+
+
+<%= render "shared/navbar"%>
+<div class="container">
+  <h1>Challenges</h1>
+
+  <div class="card-deck">
+    <div class="row">
+      <% @challenges.each do |challenge| %>
+      <div class="col-xs-4">
+        <div class="card">
+          <img class="card-img-top" src="https://i2-prod.mirror.co.uk/incoming/article6458994.ece/ALTERNATES/s615/PAY-John-McLean.jpg" alt="john">
+          <div class="card-block">
+            <div class="card-body">
+              <h5 class="card-title"><%= challenge.detail %></h5>
+              <p class="card-text"><%= link_to "SEE challenge", challenge %></p>
+              <p class="card-text"><%= link_to 'Remove challenge', challenge_path(challenge), method: :delete, data: { confirm: "Are you surreeeeee. DONT FUCK THIS UP????" } %></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</div>
