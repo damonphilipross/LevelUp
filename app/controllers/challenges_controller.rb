@@ -29,11 +29,12 @@ class ChallengesController < ApplicationController
   private
 
   def set_challenge
-    @challenge = Challenge.find(params[:id])
+    @challenge = Challenge.all
   end
 
   def challenge_params
     params.require(:challenge).permit(
+      :title,
       :detail,
       :start_date,
       :duration,

@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Challenge:</strong>
+  <%= @challenge.title %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @challenge.location %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @challenge.detail %>
+</p>
+
+<p>
+  <strong>Buy In:</strong>
+  <%= @challenge.cost %>
+</p>
+
+<br>
+
+<%= link_to 'Edit', edit_challenge_path(@challenge) %> |
+<%= link_to 'Back', challenges_path %>
+

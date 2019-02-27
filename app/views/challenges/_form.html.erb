@@ -1,31 +1,24 @@
 <%= simple_form_for(@challenge) do |f| %>
   <%= f.error_notification %>
 
-  <%= f.input :name %>
+  <%= f.input :title %>
 
-  <%= f.input :details, prompt: "Share your challenge details here" %>
+  <%= f.input :detail, prompt: "Share your challenge details here" %>
 
-  <%= f.input :email, input_html: { autocomplete: 'email' } %>
+  <%= f.input :start_date %>
 
-  <%= f.input :password, input_html: { autocomplete: 'current-password' } %>
+  <%= f.input :duration %>
 
-  <%= f.input :picture, as: :file, input_html: { accept: User::AVATAR } %>
+  <%= f.input :cost %>
 
-  <%= f.input :start_date, date select %>
+  <%= f.input :metric_verb, collection: ['push ups', 'coding', 'meditating', 'table tennis matches'] %>
 
-  <%= f.input :duration, input[type=number] %>
+  <%= f.input :metric_value, range: 0..100 %>
 
-  <%= f.input :verb, collection: User::VERB, input_html: { multiple: true } %>
+  <%= f.input :metric_frequency, as: :radio_buttons, collection: 0..10 %>
 
-  <%= f.input :value, as: :range 0..200 %>
+  <%= f.input :metric_operator, as: :check_boxes, collection: ['at least', 'less then', 'up to', 'must be'] %>
 
-  <%= f.input :freq, as: :radio_buttons, collection: 0..10 %>
-
-  <%= f.input :operator, as: :check_boxes, collection: ['at least', 'less then', 'up to', 'must be'] %>
-
-
-
-  <%= f.input :terms %>
 
   <%= f.button :submit, class: "btn-primary" %>
   <%= f.button :button, "Cancel", type: "reset", class: "btn-outline-secondary" %>
