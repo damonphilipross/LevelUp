@@ -3,7 +3,7 @@
 
     <%= f.input :title, label: 'Challenge Name' %>
 
-    <%= f.input :detail, label: 'Challenge details' %>
+    <%= f.input :detail, label: 'Challenge details', placeholder: 'descripe your amazing challenge...' %>
 
     <%= f.input :start_date, as: :date, label: 'Challenge starting date' %>
 
@@ -11,9 +11,9 @@
 
     <%= f.input :cost, label: 'Buy In', placeholder: '$' %>
 
-    <%= f.input :metric_operator, label: 'Challenge to do;', as: :check_boxes, collection: ['at least', 'less then', 'up to', 'greater then'] %>
+    <%= f.input :metric_operator, label: "Challenge ", collection: ['at least', 'less then', 'up to', 'greater then'] %>
 
-    <%= f.input :metric_value, label: ' ', placeholder: '0-100', range: 0..100 %>
+    <%= f.input :metric_value, label: '', placeholder: '0-100', range: 0..100 %>
 
     <%= f.input :metric_verb, label: 'select your challenge item;', collection: ['push ups', 'hours of coding', 'meditations', 'table tennis matches'] %>
 
