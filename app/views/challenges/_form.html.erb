@@ -1,25 +1,27 @@
-<%= simple_form_for(@challenge) do |f| %>
-  <%= f.error_notification %>
+  <%= simple_form_for(@challenge) do |f| %>
+    <%= f.error_notification %>
 
-  <%= f.input :title %>
+    <%= f.input :title, label: 'Challenge Name' %>
 
-  <%= f.input :detail, prompt: "Share your challenge details here" %>
+    <%= f.input :detail, label: 'Challenge details' %>
 
-  <%= f.input :start_date %>
+    <%= f.input :start_date, as: :date, label: 'Challenge starting date' %>
 
-  <%= f.input :duration %>
+    <%= f.input :duration, label: 'Challenge duration', placeholder: 'days' %>
 
-  <%= f.input :cost %>
+    <%= f.input :cost, label: 'Buy In', placeholder: '$' %>
 
-  <%= f.input :metric_verb, collection: ['push ups', 'coding', 'meditating', 'table tennis matches'] %>
+    <%= f.input :metric_operator, label: 'Challenge to do;', as: :check_boxes, collection: ['at least', 'less then', 'up to', 'greater then'] %>
 
-  <%= f.input :metric_value, range: 0..100 %>
+    <%= f.input :metric_value, label: ' ', placeholder: '0-100', range: 0..100 %>
 
-  <%= f.input :metric_frequency, as: :radio_buttons, collection: 0..10 %>
+    <%= f.input :metric_verb, label: 'select your challenge item;', collection: ['push ups', 'hours of coding', 'meditations', 'table tennis matches'] %>
 
-  <%= f.input :metric_operator, as: :check_boxes, collection: ['at least', 'less then', 'up to', 'must be'] %>
+    <%= f.input :metric_frequency, label: 'per', collection: ['day', 'week', 'hour', 'month'] %>
+
+    <%= f.input :avatar, as: :file, label: 'Upload your inspirational challenge image' %>
 
 
-  <%= f.button :submit, class: "btn-primary" %>
-  <%= f.button :button, "Cancel", type: "reset", class: "btn-outline-secondary" %>
-<% end %>
+    <%= f.button :submit, class: "btn-primary" %>
+    <%= f.button :button, "Cancel", type: "reset", class: "btn-outline-secondary" %>
+  <% end %>

@@ -1,5 +1,10 @@
-<h1>New Challenge!</h1>
+<div class="col-xs-12 col-sm-6" >
 
-<%= render 'form', challenge: @challenge %>
+  <h1>Create Your Challenge!</h1>
 
-<%= link_to 'Back', challenges_path %>
+  <div id='challenge_form'>
+  <%= render 'form', challenge: @challenge %>
+
+  <%= link_to 'Back', challenges_path %>
+  </div>
+</div>
