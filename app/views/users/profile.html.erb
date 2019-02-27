@@ -1,18 +1,19 @@
 <h1>Users#profile test</h1>
 <div class="container">
+  <h2> challenges </h2>
   <div class="row">
     <% @challenges.each do |challenge| %>
-    <div class="col-xs-12 col-sm-4">
       <!-- insert <div class="card"> -->
-      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://kitt.lewagon.com/placeholder/cities/shanghai');">
+    <div class="col-xs-12 col-sm-4">
+      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://images.unsplash.com/photo-1547860546-fa91780a4ef3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=600&q=80');">
         <div class="card-category">Popular</div>
         <div class="card-description">
           <h3><%= link_to challenge.title, challenge_path(challenge) %> </h3>
           <p> <%= challenge.detail %></p>
         </div>
-        <img class="card-user" src="https://kitt.lewagon.com/placeholder/users/tgenaitay">
-      </div>
     </div>
-    <% end %>
+
   </div>
+         <% end %>
+</div>
 </div>
