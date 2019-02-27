@@ -1,25 +1,19 @@
-
-<p>
-  <strong>Challenge:</strong>
-  <%= @challenge.title %>
-</p>
-
-<p>
-  <strong>Address:</strong>
-  <%= @challenge.location %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @challenge.detail %>
-</p>
-
-<p>
-  <strong>Buy In:</strong>
-  <%= @challenge.cost %>
-</p>
-
-<br>
-
-<%= link_to 'Back', challenges_path %>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <h1> <%= @challenge.title %></h1>
+      <%= link_to "Back to all challenges", challenges_path %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12 col-md-6">
+      <h3>The Challenge</h3>
+          <h5><%= @challenge.detail %></h5>
+        <h4>Location</h4>
+          <h5><%= @challenge.location %></h5>
+          <h4>Cost</h4>
+            <h5>$<%= @challenge.cost %></h5>
+    </div>
+  </div>
+</div>
 
