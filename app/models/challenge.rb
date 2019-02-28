@@ -10,4 +10,6 @@ class Challenge < ApplicationRecord
   validates :metric_frequency, presence: true
   validates :metric_operator, presence: true
   validates :location, presence: true
+
+  Tag = ["fitness", "health", "beauty", "technology", "diet", "knowledge", "wellness", "wealth", "mindfulness", "social"]
 end
