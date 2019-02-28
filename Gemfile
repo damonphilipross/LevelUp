@@ -22,7 +22,7 @@ gem 'faker', :git => 'https://github.com/stympy/faker.git', :branch => 'master'
 group :development do
   gem 'web-console', '>= 3.3.0'
 end
-
+gem 'pg_search'
 group :development, :test do
   gem 'pry-byebug'
   gem 'pry-rails'

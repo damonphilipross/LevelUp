@@ -15,13 +15,14 @@ puts "starting seed"
 end
 user_array = User.all
 25.times do
+  metric_verb = Faker::Verb.base
   challenge = Challenge.new(
-    title: "#{rand(50)} day #{Faker::Hacker.verb} challenge",
+    title: "#{rand(50)} day #{metric_verb} challenge",
     detail: Faker::Quote.yoda,
     start_date: Faker::Date.forward(50),
     duration: rand(50),
     cost: rand(500.00),
-    metric_verb: Faker::Verb.base,
+    metric_verb: metric_verb,
     metric_value: rand(50.0),
     metric_frequency: ["day", "week", "month", "decade"].sample,
     metric_operator: ["greater than", "less than", "equal to"].sample,
