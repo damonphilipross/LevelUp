@@ -9,4 +9,7 @@ class UsersController < ApplicationController
       # challenges this user is participating in
     end
   end
+
+  def destroy
+  end
 end
