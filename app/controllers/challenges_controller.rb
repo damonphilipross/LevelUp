@@ -1,7 +1,11 @@
 class ChallengesController < ApplicationController
   before_action :set_challenge, only: [:show, :update, :destroy]
   def index
-    @challenges = Challenge.all
+    if params[:query].present?
+      @challenges = Challenge.search_by_tag(params[:query])
+    else
+      @challenges = Challenge.all
+    end
   end
 
   def show
