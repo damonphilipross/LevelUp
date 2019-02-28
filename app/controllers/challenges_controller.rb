@@ -6,6 +6,12 @@ class ChallengesController < ApplicationController
     else
       @challenges = Challenge.all
     end
+    @markers = @challenges.map do |challenge|
+      {
+        lng: challenge.longitude,
+        lat: challenge.latitude
+      }
+    end
   end
 
   def show
