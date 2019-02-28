@@ -12,7 +12,7 @@ class Challenge < ApplicationRecord
   validates :location, presence: true
 
   Tag = ["fitness", "health", "beauty", "technology", "diet", "knowledge", "wellness", "wealth", "mindfulness", "social"]
-  include PgSearch
+   include PgSearch
   pg_search_scope :search_by_tag,
     against: [:tag],
     using: {
