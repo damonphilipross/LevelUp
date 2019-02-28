@@ -2,7 +2,8 @@
 .navbar-wagon {
   position: fixed; /* Set the navbar to fixed position */
   z-index: 10;
-  top: 0; /* Position the navbar at the top of the page */
+  top: 0;
+  left: 0px; /* Position the navbar at the top of the page */
   width: 100%; /* Full width */
   box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
   background: rgba(250,250,250,.7);
@@ -11,7 +12,7 @@
   padding: 0px 30px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 /* Logo */
@@ -19,13 +20,20 @@
   height: 50px;
 }
 
-/* User Avatar */
-.navbar-wagon .avatar {
-  height: 35px;
-  width: 35px;
+.avatar {
+  height: 50px;
+  width: 50px;
+  padding: 2px;
   border-radius: 50%;
-}
+  margin: 1px solid white;
+  border: 2px solid #d92c7b;
 
+border-color: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+border-color: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+border-color: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+
+}
 /* Right section */
 .navbar-wagon-right {
   display: flex;

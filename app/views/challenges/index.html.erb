@@ -1,16 +1,28 @@
-
 <div class="container">
-  <h1>Challenges</h1>
+  <p>scroll challenges</p>
+
     <div class="cards">
-      <% @challenges.each do |challenge| %>
-        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://source.unsplash.com/300x200);">
+        <% @challenges.each do |challenge| %>
           <%= link_to challenge do %>
-          <div class="card-category">
-            <%= challenge.title %>
-          </div>
+            <div class="card">
+              <div class="card-header">
+                <div class="card-category">
+                  <%= cl_image_tag("BennoSqAvatar-01.png", class: "avatar") %>
+                  <%= challenge.title %>
+                </div>
+              </div>
+                <div class="card-content" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://source.unsplash.com/300x200);">
+                </div>
+
+                <div class="card-footer">
+                  <div id="footer-content">
+                    <p><strong>Challenge details;</strong> <lighter><%= challenge.detail %></lighter></p>
+                  </div>
+                </div>
+            </div>
           <% end %>
-        </div>
-    <% end %>
-</div>
+        <% end %>
+    </div>
+
 </div>
 
