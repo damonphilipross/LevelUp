@@ -6,9 +6,12 @@
           <%= link_to challenge do %>
             <div class="card">
               <div class="card-header">
-                <div class="card-category">
+                <div class="card-avatar">
                   <%= cl_image_tag("BennoSqAvatar-01.png", class: "avatar") %>
-                  <%= challenge.title %>
+                </div>
+                <div id="header-body">
+                  <%= challenge.title %><br>
+                  <p><%= challenge.location %></p>
                 </div>
               </div>
                 <div class="card-content" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://source.unsplash.com/300x200);">
@@ -16,7 +19,7 @@
 
                 <div class="card-footer">
                   <div id="footer-content">
-                    <p><strong>Challenge details;</strong> <lighter><%= challenge.detail %></lighter></p>
+                    <p><strong>Challenge details;</strong> <p><%= challenge.detail %></p>
                   </div>
                 </div>
             </div>
