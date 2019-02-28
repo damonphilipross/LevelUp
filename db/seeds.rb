@@ -11,9 +11,9 @@ Participant.destroy_all
 Challenge.destroy_all
 User.destroy_all
 puts "starting seed"
-user = User.create (email: dale@hindle.com, password: "password", influencer: true)
-user = User.create (email: damon@damon.com, password: "password", influencer: true)
-user = User.create (email: ben@ben.com, password: "password", influencer: true)
+user = User.create(email: "dale@hindle.com", password: "password", influencer: true)
+user = User.create(email: "damon@damon.com", password: "password", influencer: true)
+user = User.create(email: "ben@ben.com", password: "password", influencer: true)
 puts "creating users"
 10.times do
   user = User.create!(
@@ -26,6 +26,7 @@ puts "creating challenges"
   metric_verb = Faker::Verb.base
   challenge = Challenge.new(
     title: "#{rand(50)} day #{metric_verb} challenge",
+    tag: Challenge::Tag.sample,
     detail: Faker::Quote.yoda,
     start_date: Faker::Date.forward(50),
     duration: rand(50),
