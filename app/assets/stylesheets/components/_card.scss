@@ -18,10 +18,28 @@
 }
 .card-header{
   display: flex;
-  margin-top:5px;
-  margin-bottom: 5px;
+  align-content: flex-start;
+  margin-top:.3em;
+  margin-bottom: .5em;
   padding-top: 5px;
   padding-bottom: 0px;
+}
+.card-avatar{
+  position: relative;
+  left:20px;
+  top: .4em;
+  font-weight:bold;
+  color: black;
+}
+#header-body{
+  position: relative;
+  vertical-align: center;
+  left: 40px;
+  top: .4em;
+  color: black;
+  p{
+    font-weight: lighter;
+  }
 }
 .card-user-image{
   border-radius: 50%;
@@ -29,11 +47,7 @@
   height: 40px;
   vertical-align: middle;
 }
-.card-category{
-  margin-left:20px;
-  font-weight:bold;
-  color: black;
-}
+
 .card-content{
   max-width: 35em;
   height: 40em;
@@ -51,6 +65,9 @@
 }
 #footer-content{
   padding: 20px;
+  p{
+    font-weight: lighter;
+  }
 }
 // hr{
 //   border: none;
