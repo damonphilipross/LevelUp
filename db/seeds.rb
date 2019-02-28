@@ -6,15 +6,23 @@ require 'faker'
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+puts "deleting all data"
+Participant.destroy_all
+Challenge.destroy_all
+User.destroy_all
 puts "starting seed"
-50.times do
+user = User.create (email: dale@hindle.com, password: "password", influencer: true)
+user = User.create (email: damon@damon.com, password: "password", influencer: true)
+user = User.create (email: ben@ben.com, password: "password", influencer: true)
+puts "creating users"
+10.times do
   user = User.create!(
     email: Faker::Internet.email,
     password: "password")
   # user.save
 end
-user_array = User.all
-25.times do
+puts "creating challenges"
+20.times do
   metric_verb = Faker::Verb.base
   challenge = Challenge.new(
     title: "#{rand(50)} day #{metric_verb} challenge",
@@ -29,15 +37,18 @@ user_array = User.all
     latitude: Faker::Address.latitude,
     longitude: Faker::Address.longitude,
     location: Faker::Address.full_address)
-  challenge.user = user_array.sample
+  challenge.user = User.first(3).sample
   challenge.save!
-end
-challenge_array = Challenge.all
 
-25.times do
-  participant = Participant.new
-  participant.user = user_array.sample
-  participant.challenge = challenge_array.sample
-  participant.save!
 end
+puts "creating participations"
+User.last(10).each do |user|
+  2.times do
+    participant = Participant.new
+    participant.user = user
+    participant.challenge = Challenge.all.sample
+    participant.save!
+  end
+end
+
 puts "seed complete"
