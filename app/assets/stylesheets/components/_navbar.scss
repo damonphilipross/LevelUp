@@ -12,12 +12,13 @@
   padding: 0px 30px;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 /* Logo */
 .navbar-wagon-brand img {
   height: 50px;
+  padding-left: 13.5em;
 }
 
 .avatar {
