@@ -3,18 +3,10 @@
   border: 1px solid #e6e6e6;
   width: 35em;
   height: 100%;
-  // text-shadow: 0 1px 3px rgba(0,0,0,0.6);
   background-size: cover !important;
-  // background-position: center;
   margin-top: 1em;
   margin-bottom: 3em;
   padding-bottom:40px;
-  // color: white;
-  // position: relative;
-  // justify-content: center;
-  // align-items: center;
-  // border-radius: 5px;
-  // box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 .card-header{
   display: flex;
@@ -47,13 +39,10 @@
   height: 40px;
   vertical-align: middle;
 }
-
 .card-content{
   max-width: 35em;
   height: 40em;
   background-size: cover !important;
-
-  // padding: 20px;
 }
 .card-footer{
   padding-bottom: 20px;
@@ -69,170 +58,29 @@
     font-weight: lighter;
   }
 }
-// hr{
-//   border: none;
-//   border-bottom: 1px solid #ccc;
-//   margin-top: 30px;
-//   margin-bottom: 0px;
-//   padding-bottom: 0px;
-
-// }
 .footer-action-icons{
   font-size: 16px;
   color: #ccc;
 }
-
-
-
-// .card-category {
-//   padding-top: 80px;
-//   color: white;
-//   font-size: 24px;
-//   font-weight: bold;
-//   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-//   text-align: center;
-// }
-
 .card:hover {
-  // opacity: 0.6;
-  border-width: 2px;
+ border-width: 2px;
 }
-
 .card:hover a {
   text-decoration: none;
 }
-
 .cards {
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 16px;
 }
-
-// // Smallest device
-// @media (min-width: 100px) and (max-width: 575px) {
-//   .cards {
-//     grid-template-columns: 1fr;
-//   }
-// }
-
-// // Small devices (landscape phones, 576px and up)
-// @media (min-width: 576px) {
-//   .cards {
-//     grid-template-columns: 1fr;
-//   }
-// }
-
-// // Medium devices (tablets, 768px and up)
-// @media (min-width: 768px) {
-//   .cards {
-//     grid-template-columns: 1fr 1fr;
-//   }
-// }
-
-// // Large devices (desktops, 992px and up)
-// @media (min-width: 992px) {
-//   .cards {
-//     grid-template-columns: 1fr 1fr 1fr;
-//   }
-// }
-
-// // Extra large devices (large desktops, 1200px and up)
-// @media (min-width: 1200px) {
-//   .cards {
-//     grid-template-columns: 1fr 1fr 1fr;
-//   }
-// }
-
-
-
-
-// .instagram{
-//   width:100px; height:100px;
-//   background: #f09433;
-// background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-// background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
-// background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
-// filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
-//   }
-
-
-
+.container{
+  padding-left: 8em;
+}
 body{
   background-color: #fafafa;
-  padding-left: 12.5em;
+  // padding-left: 12.5em;
   font-family: 'Droid Sans', sans-serif;
 }
 a{
   text-decoration: none;
 }
-// .Instagram-card{
-//   background: #ffffff;
-//   border: 1px solid #f2f2f2;
-//   border-radius: 3px;
-//   width: 100%;
-//   max-width: 600px;
-//   margin: auto;
-// }
-// .Instagram-card-header{
-//   padding: 20px;
-//   height: 40px;
-// }
-// .Instagram-card-user-image{
-//   border-radius: 50%;
-//   width: 40px;
-//   height: 40px;
-//   vertical-align: middle;
-// }
-// .Instagram-card-time{
-//   float: right;
-//   width: 80px;
-//   padding-top:10px;
-//   text-align: right;
-//   color: #999;
-// }
-// .Instagram-card-user-name{
-//   margin-left:20px;
-//   font-weight:bold;
-//   color: #262626;
-// }
-// .Instagram-card-content{
-//   padding: 20px;
-// }
-// .Likes{
-//   font-weight: bold;
-// }
-// .Instagram-card-content-user{
-//   font-weight: bold;
-//   color: #262626;
-// }
-// .hashtag{
-//   color: #003569;
-// }
-// .comments{
-//   color:#999;
-// }
-// .user-comment{
-//   color: #003569;
-// }
-// .Instagram-card-footer{
-//   padding: 20px;
-//   display: flex;
-//   align-items: center;
-// }
-// hr{
-//   border: none;
-//   border-bottom: 1px solid #ccc;
-//   margin-top: 30px;
-//   margin-bottom: 0px;
-//   padding-bottom: 0px;
-
-// }
-// .footer-action-icons{
-//   font-size: 16px;
-//   color: #ccc;
-// }
-// .comments-input{
-//   border: none;
-//   margin-left: 10px;
-//   width: 100%;
-// }
