@@ -1,0 +1,25 @@
+.btn-lg{
+  height: 200px;
+  width: 250px;
+}
+
+#browse_button{
+  margin-top: 20px;
+  margin-left: 20px;
+  background-color: #d92c7b;
+  box-shadow: 3px 3px 3px gray;
+  border-color: #d92c7b;
+}
+#create_button{
+  margin-top: 130px;
+  margin-left: 20px;
+  background-color: #f4793b;
+  box-shadow: 3px 3px 3px gray;
+  border-color: #f4793b;
+}
+#create_button:hover{
+  box-shadow: -3px -3px 3px rgb(50,50,50);
+}
+#browse_button:hover{
+  box-shadow: -3px -3px 3px rgb(50,50,50);
+}
