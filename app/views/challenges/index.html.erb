@@ -1,10 +1,11 @@
 <div class="container">
-  <p>scroll challenges</p>
+
 
     <div class="cards">
+        <p>scroll challenges</p>
         <% @challenges.each do |challenge| %>
-          <%= link_to challenge do %>
             <div class="card">
+              <%= link_to challenge do %>
               <div class="card-header">
                 <div class="card-avatar">
                   <%= cl_image_tag("BennoSqAvatar-01.png", class: "avatar") %>
@@ -22,8 +23,8 @@
                     <p><strong>Challenge details;</strong> <p><%= challenge.detail %></p>
                   </div>
                 </div>
+              <% end %>
             </div>
-          <% end %>
         <% end %>
     </div>
 

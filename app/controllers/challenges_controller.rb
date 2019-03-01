@@ -10,8 +10,7 @@ class ChallengesController < ApplicationController
   end
 
   def show
-   set_challenge
-
+    @participant = Participant.new
   end
 
   def create
